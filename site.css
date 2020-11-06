@@ -1,0 +1,56 @@
+.block {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+.wall {
+  background-color: black;
+}
+
+.floor {
+  background-color: gray;
+}
+
+.goal {
+  background-color: yellow;
+}
+
+.box {
+  background-color: brown;
+}
+
+.player {
+  background-color: green;
+}
+
+.floor.box {
+  border: solid gray 2px;
+}
+.floor.player {
+  border: solid gray 2px;
+}
+
+.goal.box {
+  background-color: goldenrod;
+  border: solid yellow 2px;
+}
+.goal.player {
+  border: solid yellow 2px;
+}
+
+.yes {
+  background: url(icons/walking-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: green;
+  background-color: green;
+}
+
+.no {
+  background: url(icons/male-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: red;
+  background-color: red;
+}

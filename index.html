@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sokoban´s movement rules</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sokoban´s map blocks definition</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Map block</th>
+            <th>Represents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="wall block"></div>
+            </td>
+            <td>
+              <p>Wall</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="floor block"></div>
+            </td>
+            <td>
+              <p>Empty floor space</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="goal block"></div>
+            </td>
+            <td>
+              <p>Goal</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player block"></div>
+            </td>
+            <td>
+              <p>The player</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="box block"></div>
+            </td>
+            <td>
+              <p>Crate box/block</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player floor block"></div>
+            </td>
+            <td>
+              <p>The player on floor</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player goal block"></div>
+            </td>
+            <td>
+              <p>The player on a goal</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="box floor block"></div>
+            </td>
+            <td>
+              <p>Crate box/block on floor</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="box goal block"></div>
+            </td>
+            <td>
+              <p>Crate box/block on a goal</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Movement scenario´s</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Before</th>
+            <th>Move</th>
+            <th>After</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="player floor block"></div>
+              <div class="floor block"></div>
+            </td>
+            <td>
+              <div class="yes block"></div>
+            </td>
+            <td>
+              <div class="floor block"></div>
+              <div class="player floor block"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player block"></div>
+              <div class="goal block"></div>
+            </td>
+            <td>
+              <div class="yes block"></div>
+            </td>
+            <td>
+              <div class="floor block"></div>
+              <div class="player goal block"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player block"></div>
+              <div class="wall block"></div>
+            </td>
+            <td>
+              <div class="no block"></div>
+            </td>
+            <td>
+              <div class="player block"></div>
+              <div class="wall block"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+              <div class="floor block"></div>
+            </td>
+            <td>
+              <div class="yes block"></div>
+            </td>
+            <td>
+              <div class="floor block"></div>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+              <div class="goal block"></div>
+            </td>
+            <td>
+              <div class="yes block"></div>
+            </td>
+            <td>
+              <div class="floor block"></div>
+              <div class="player floor block"></div>
+              <div class="box goal block"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+              <div class="wall block"></div>
+            </td>
+            <td>
+              <div class="no block"></div>
+            </td>
+            <td>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+              <div class="wall block"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+              <div class="box floor block"></div>
+            </td>
+            <td>
+              <div class="no block"></div>
+            </td>
+            <td>
+              <div class="player floor block"></div>
+              <div class="box floor block"></div>
+              <div class="box floor block"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      SVG files use on this page belongs to https://use.fontawesome.com
+    </footer>
+  </body>
+</html>
